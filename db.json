@@ -2,7 +2,7 @@
   "books": [
     {
       "id": 1,
-      "title": "The Shinobi Initiative",
+      "title": "The Shinobi Disaster",
       "description": "The reality-bending adventures of a clandestine service agency in the year 2166",
       "year": 2014,
       "quantity": "10",
@@ -10,7 +10,7 @@
     },
     {
       "id": 2,
-      "title": "Tess the Wonder Dog",
+      "title": "Tess the Wonder Pup",
       "description": "The tale of a dog who gets super powers",
       "year": 2007,
       "quantity": "3",

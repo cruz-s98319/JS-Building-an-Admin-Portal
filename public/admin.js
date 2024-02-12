@@ -5,8 +5,8 @@ async function main() {
     booksJSON.forEach(function(book) {
         let div = document.createElement('div')
         div.innerHTML = `
-            <img src = "${book.imageURL}"[width="200"] />
-            <h3>${book.title}</h3>
+            <img src = "${book.imageURL}" width="200" />
+            <h3 id="title-${book.id}">${book.title}</h3>
             <p>Year published: ${book.year}</p>
             <p>Quantity: ${book.quantity}</p>
             <input id="${book.id}" type="text" />
@@ -23,7 +23,7 @@ async function changeTitle(id) {
     let value = input.value
 
     let response = await fetch('http://localhost:3001/updateBook', {
-        method: 'POST',
+        method: 'PATCH',
         headers: {
             'Content-Type': 'application/json'
         },
@@ -34,4 +34,6 @@ async function changeTitle(id) {
     })
     let responseJSON = await response.json()
     console.log(responseJSON)
+
+    document.getElementById(`title-${id}`).textContent = value
 }
